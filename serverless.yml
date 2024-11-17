@@ -1,0 +1,20 @@
+service: user-notifications-api
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  environment:
+    DATABASE_URI: ${env:DATABASE_URI}
+    LOG_LEVEL: ${env:LOG_LEVEL}
+
+functions:
+  api:
+    handler: dist/main.handler
+    events:
+      - http:
+          path: /{proxy+}
+          method: any
+
+plugins:
+  - serverless-offline
+  - serverless-http
