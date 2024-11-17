@@ -1,7 +1,5 @@
 # User Notification Preferences API 🔔
 
-A serverless API built with NestJS for managing user notification preferences and sending notifications. The API includes CRUD operations, notification delivery simulation, and basic analytics.
-
 ## 🔗 Links
 
 - **Backend API**: [https://user-notifications-api.vercel.app](https://user-notifications-api.vercel.app)
