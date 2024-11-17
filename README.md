@@ -1,99 +1,221 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# User Notification Preferences API 🔔
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+A serverless API built with NestJS for managing user notification preferences and sending notifications. The API includes CRUD operations, notification delivery simulation, and basic analytics.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 🔗 Links
 
-## Description
+- **Backend API**: [https://user-notifications-api.vercel.app](https://user-notifications-api.vercel.app)
+- **Swagger Documentation**: [https://user-notifications-api.vercel.app/docs](https://user-notifications-api.vercel.app/docs)
+- **GitHub Repository**: [https://github.com/deepak9236/User-Notifications-Api.git](https://github.com/deepak9236/User-Notifications-Api.git)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## ✨ Features
 
-## Project setup
+- Manage user preferences for notifications
+- Notification delivery simulation
+- MongoDB integration
+- Fully serverless (deployable on Vercel)
+- API validation with class-validator
+- Swagger API documentation
 
-```bash
-$ npm install
-```
+## 🛠️ Tech Stack
 
-## Compile and run the project
+- **Backend**: NestJS, TypeScript
+- **Database**: MongoDB
+- **Testing**: Jest (unit & integration tests)
+- **Deployment**: Vercel
 
-```bash
-# development
-$ npm run start
+## 📋 Prerequisites
 
-# watch mode
-$ npm run start:dev
+Ensure you have the following installed:
 
-# production mode
-$ npm run start:prod
-```
+- Node.js (v16 or above)
+- MongoDB (local or cloud)
+- Vercel CLI (for Vercel deployment)
 
-## Run tests
+## 🚀 Setup
+
+### 1. Clone the repository
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+git clone https://github.com/deepak9236/User-Notifications-Api.git
+cd User-Notifications-Api
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### 2. Install dependencies
 
 ```bash
-$ npm install -g mau
-$ mau deploy
+npm install
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### 3. Set up environment variables
 
-## Resources
+Create a `.env` file in the root directory with the following variables:
 
-Check out a few resources that may come in handy when working with NestJS:
+```env
+DATABASE_URI=mongodb+srv://<username>:<db_password>@cluster0.c9iec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+PORT=5000
+LOG_LEVEL=debug
+```
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+### 4. Run the application
 
-## Support
+```bash
+npm run start:dev
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+The API will be available at: `http://localhost:5000`
 
-## Stay in touch
+## 🧪 Testing
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### Run Unit Tests
 
-## License
+```bash
+npm run test
+```
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### Run Integration Tests
+
+```bash
+npm run test:e2e
+```
+
+## 📦 Deployment
+
+### Vercel Deployment
+
+1. Install Vercel CLI:
+```bash
+npm install -g vercel
+```
+
+2. Build the project:
+```bash
+npm run build
+```
+
+3. Deploy to Vercel:
+```bash
+vercel
+```
+
+4. Set Environment Variables on Vercel:
+   - Add your `MONGO_URI` variable in the Vercel dashboard under Project Settings > Environment Variables
+
+## 📝 API Endpoints & Postman Collection
+
+Import the following collection into Postman to explore and test all API endpoints:
+
+```json
+{
+  "info": {
+    "_postman_id": "d595f969-3f53-4d5d-bb1f-1adafaef58f6",
+    "name": "User Notifications Api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Send a Notification",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"user123\",\n  \"type\": \"marketing\",\n  \"channel\": \"email\",\n  \"content\": {\n    \"subject\": \"Special Offer\",\n    \"body\": \"Check out our latest deals!\"\n  }\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/notifications/send",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "notifications", "send"]
+        }
+      }
+    },
+    {
+      "name": "Create User Preferences",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"user123\",\n  \"email\": \"user@example.com\",\n  \"preferences\": {\n    \"marketing\": true,\n    \"newsletter\": false,\n    \"updates\": true,\n    \"frequency\": \"weekly\",\n    \"channels\": {\n      \"email\": true,\n      \"sms\": false,\n      \"push\": true\n    }\n  },\n  \"timezone\": \"America/New_York\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/preferences",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "preferences"]
+        }
+      }
+    },
+    {
+      "name": "Get User Preferences",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/preferences/user123",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "preferences", "user123"]
+        }
+      }
+    },
+    {
+      "name": "Get Notification Logs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/notifications/user123/logs",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "notifications", "user123", "logs"]
+        }
+      }
+    },
+    {
+      "name": "Get Notification Stats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/notifications/stats",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "notifications", "stats"]
+        }
+      }
+    }
+  ]
+}
+```
+
+### Available Endpoints:
+
+1. **User Preferences**
+   - `POST /api/preferences` - Create user preferences
+   - `GET /api/preferences/{userId}` - Get user preferences
+   - `PATCH /api/preferences/{userId}` - Update user preferences
+   - `DELETE /api/preferences/{userId}` - Delete user preferences
+
+2. **Notifications**
+   - `POST /api/notifications/send` - Send a notification
+   - `GET /api/notifications/{userId}/logs` - Get notification logs
+   - `GET /api/notifications/stats` - Get notification statistics
+
+For detailed request/response examples, please refer to the Postman collection above.
