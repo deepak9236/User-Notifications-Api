@@ -6,6 +6,16 @@
 - **Swagger Documentation**: [https://user-notifications-api.vercel.app/docs](https://user-notifications-api.vercel.app/docs)
 - **GitHub Repository**: [https://github.com/deepak9236/User-Notifications-Api.git](https://github.com/deepak9236/User-Notifications-Api.git)
 
+![App Screenshot](https://github.com/deepak9236/User-Notifications-Api/blob/master/swagger.png)
+
+### Available Endpoints:
+
+1. **User Preferences**
+   - `POST /api/preferences` - Create user preferences
+   - `GET /api/preferences/{userId}` - Get user preferences
+   - `PATCH /api/preferences/{userId}` - Update user preferences
+   - `DELETE /api/preferences/{userId}` - Delete user preferences
+
 ## ✨ Features
 
 - Manage user preferences for notifications
