@@ -16,6 +16,13 @@
    - `PATCH /api/preferences/{userId}` - Update user preferences
    - `DELETE /api/preferences/{userId}` - Delete user preferences
 
+2. **Notifications**
+   - `POST /api/notifications/send` - Send a notification
+   - `GET /api/notifications/{userId}/logs` - Get notification logs
+   - `GET /api/notifications/stats` - Get notification statistics
+
+For detailed request/response examples, please refer to the Postman collection above.
+
 ## ✨ Features
 
 - Manage user preferences for notifications
@@ -213,17 +220,4 @@ Import the following collection into Postman to explore and test all API endpoin
 }
 ```
 
-### Available Endpoints:
 
-1. **User Preferences**
-   - `POST /api/preferences` - Create user preferences
-   - `GET /api/preferences/{userId}` - Get user preferences
-   - `PATCH /api/preferences/{userId}` - Update user preferences
-   - `DELETE /api/preferences/{userId}` - Delete user preferences
-
-2. **Notifications**
-   - `POST /api/notifications/send` - Send a notification
-   - `GET /api/notifications/{userId}/logs` - Get notification logs
-   - `GET /api/notifications/stats` - Get notification statistics
-
-For detailed request/response examples, please refer to the Postman collection above.
